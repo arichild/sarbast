@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+
+<html class="no-scroll" lang="en">
+
+  <head>
+
+    <meta charset="UTF-8" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" type="text/css" href="./css/app.css">
+    <link rel="stylesheet" type="text/css" href="./css/places.css">
+    <link rel="icon" type="image/png" href="./img/favicon-32x32.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="./img/favicon-16x16.png" sizes="16x16" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jQueryFormStyler/2.0.2/jquery.formstyler.min.css">
+
+    <title>Sarbast</title>
+
+  </head>
+
+  <body>
+
+    <div id="app">
+
+      <div class="mobile-nav">
+
+        <nav>
+
+          <ul>
+
+            <li><a class="link" href="#hero">Birinchi sahifa </a></li>
+
+            <li><a class="link" href="#history">Tariximiz </a></li>
+
+            <li><a class="link" href="#brands">Brendlarimiz </a></li>
+
+            <li><a class="link" href="#ingredients">Mahsulot tarkibi </a></li>
+
+            <li><a class="link" href="#achievements">Yutuqlarimiz</a></li>
+
+            <li><a class="link" href="#quiz">Savol-javob</a></li>
+
+            <li><a class="active" href="xarita.html">Xarita</a></li>
+          </ul>
+
+        </nav>
+
+      </div>
+
+      <div class="top-panel content">
+
+        <div class="nav-panel">
+
+          <a class="logo" href=""
+
+            ><img src="./img/icons/logo.png" alt="logo"
+
+          /></a>
+
+          <nav class="navigation">
+
+            <ul>
+
+              <li><a class="link" href="#hero">Bosh saxifa</a></li>
+
+              <li><a class="link" href="#history">Tarix </a></li>
+
+              <li><a class="link" href="#brands">Bizning brendlarimiz </a></li>
+
+              <li><a class="link" href="#ingredients">Tarkibi </a></li>
+
+              <li><a class="link" href="#achievements">Muvaffaqiyatlar</a></li>
+
+              <li><a class="link" href="#quiz">Savol-javob</a></li>
+
+              <li><a class="active" href="xarita.html">Xarita</a></li>
+
+            </ul>
+
+            <div class="flex items-center">
+
+              <div class="mr-3 flex items-center lg:ml-5">
+
+                <a class="lang-link" href="/index.html">Ru </a>
+
+                <div class="mx-2 h-4 w-px bg-brand-accent"></div>
+
+                <a class="lang-link active" href="/index-uz.html">Uz </a>
+
+              </div>
+
+              <button class="hamburger relative ml-3 block lg:hidden"></button>
+
+            </div>
+
+          </nav>
+
+        </div>
+
+      </div>
+
+      <div class="modal">
+
+        <div class="modal-wrapper">
+
+          <div class="logo"><img src="./img/icons/logo.png" /></div>
+
+          <div class="verify">
+
+            <div class="text-center">
+
+              <h1
+
+                class="text-3xl font-semibold uppercase text-white lg:text-4xl"
+
+              >
+
+                TUG'ILGAN YILINGIZNI YOZING
+
+              </h1>
+
+              <p class="text-xl text-white opacity-80">
+
+                Bu sahifaga kirish uchun yoshingiz 21 ga to'lgan bo'lishi kerak.
+
+              </p>
+
+            </div>
+
+            <div class="verify-input-wrapper">
+
+              <input
+
+                class="verify-input verify-input-one"
+
+                type="text"
+
+                id="input1"
+
+                tabindex="1"
+
+                onkeyup="if (this.value.length == 1) document.getElementById('input2').focus();"
+
+                onInput="{e =&gt; testJump(e.target)}"
+
+                maxlength="1"
+
+              />
+
+              <input
+
+                class="verify-input verify-input-two"
+
+                type="text"
+
+                id="input2"
+
+                tabindex="2"
+
+                onkeyup="if (this.value.length == 1) document.getElementById('input3').focus();"
+
+                onInput="{e =&gt; testJump(e.target)}"
+
+                maxlength="1"
+
+              />
+
+              <input
+
+                class="verify-input verify-input-three"
+
+                type="text"
+
+                id="input3"
+
+                tabindex="3"
+
+                onkeyup="if (this.value.length == 1) document.getElementById('input4').focus();"
+
+                onInput="{e =&gt; testJump(e.target)}"
+
+                maxlength="1"
+
+              />
+
+              <input
+
+                class="verify-input verify-input-four"
+
+                type="text"
+
+                id="input4"
+
+                tabindex="4"
+
+                onInput="{e =&gt; testJump(e.target)}"
+
+                maxlength="1"
+
+              />
+
+            </div>
+
+            <div
+
+              class="no-verify mt-3 text-center text-xl font-semibold text-white"
+
+            >
+
+              Вам нет 21 года, вы не можете перейти на сайт
+
+            </div>
+
+          </div>
+
+          <div class="warning">
+
+            21+ SPIRTLI ICHIMLIKLARNI ORTIQCHA ICHISH INSON ASAB TIZIMI VA ICHKI
+
+            A'ZOLARI JIDDIY KASAL BO'LISHIGA SABAB BO'LADI.
+
+          </div>
+
+          <div class="modal-eagle">
+
+            <img src="./img/icons/eagle.png" alt="" />
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="coockie">
+
+        <div
+
+          class="backdrop-coockie absolute inset-0 z-40 bg-black bg-opacity-50"
+
+        ></div>
+
+        <div class="coockie-content">
+
+          <h1 class="text-xl font-semibold uppercase">
+
+            YAXSHI RAQAMLI NATIJALAR UCHUN COOKIE BOSHQARMASI
+
+          </h1>
+
+          <p class="mt-3">
+
+            Agar siz cookie-fayllardan foydalanishga rozi bo'lsangiz, "ruxsat
+
+            berish"ni bosing
+
+          </p>
+
+          <div class="mt-4">
+
+            <button class="btn-coockie mr-2">Ruxsat berish</button>
+
+            <button class="btn-coockie">Rad etish</button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <section>
+        <div class="content y-distance pt-140">
+            <div class="max-w-md mx-auto text-center mb-7 lg:mb-0">
+                <h2 class="heading-primary text-white">SARBASTni qayerdan topish mumkin</h2>
+            </div>
+            <div class="map d-flex flex-row justify-content-between" style="margin-top: 28px;">
+                <div id="map"></div>
+                <div class="map-menu">
+                  <div class="map-menu-head flex">
+                    <div class="map-menu__title">Manzillar</div>
+
+                    <select class="ui-select">
+                      <option>Barcha shaharlar</option>
+                      <option  id="1" data-center="41.311158,69.279737">Toshkent shahri</option>
+                      <option id="2" data-center="41.118933,69.058544">Yangiyul</option>
+                      <option id="3" data-center="41.233171,69.372083">Yik-Ota</option>
+                      <option id="4" data-center="41.392318,69.316963">Gulzor</option>
+                    </select>
+                  </div>
+                </div>
+                <script>
+                  let menu_items = [{"id":1048,"name":"СМИ","legal_name":"!!! OOO \"HORECA PROMO MANAGEMENT\"","type":"1","address":"Ташкент, ул. Кары-Ниязи, 66","cityID": 1,"phone":"+998 99 835 85 00","open_from":"00:00:00","open_to":"00:00:00","coords":"41.3230185862631, 69.2977368459106","sort":"500","is_active":"1","created_at":"2023-04-20T08:25:26.000000Z","updated_at":"2023-04-20T08:25:26.000000Z"},{"id":1049,"name":"Bavaria Plaza","legal_name":"MChJ \"BEST FOOD SOLUTION\" Bavariya","type":"1","address":"Ташкент, ул. Бабура, 21А", "cityID": 1,"phone":"+998 71 281 44 04","open_from":"12:00:00","open_to":"01:00:00","coords":"41.2914691000000, 69.2513474000000","sort":"500","is_active":"1","created_at":"2023-04-20T08:25:26.000000Z","updated_at":"2023-04-20T08:25:26.000000Z"},{"id":1050,"name":"Oblacko","legal_name":"!!! Д MChJ \"SMOKY\"","type":"1","address":"Ташкент, ул. Фидокор, 10","cityID": 1,"phone":"+998 99 798 85 88","open_from":"14:00:00","open_to":"04:00:00","coords":"41.2984075000000, 69.2785346000000","sort":"500","is_active":"1","created_at":"2023-04-20T08:25:26.000000Z","updated_at":"2023-04-20T08:25:26.000000Z"},{"id":1051,"name":"Steam","legal_name":"!!! MCHJ \"SMART STEAM\"","type":"1","address":"Ташкент, ул. Ниёзбек Йули, 2","cityID": 1,"phone":"+998 781 22 25 55","open_from":"12:00:00","open_to":"00:00:00","coords":"41.3248856000000, 69.2829198000000","sort":"500","is_active":"1","created_at":"2023-04-20T08:25:26.000000Z","updated_at":"2023-04-20T08:25:26.000000Z"},{"id":1052,"name":"БарDuck","legal_name":"!!! MCHJ \"ENERGY PROMMAGNAT\"","type":"1","address":"Ташкент, ул. Матбуотчилар, 17","cityID": 1,"phone":"+998 90 999 46 31","open_from":"20:00:00","open_to":"04:00:00","coords":"41.3119033333333, 69.2732216666667","sort":"500","is_active":"1","created_at":"2023-04-20T08:25:26.000000Z","updated_at":"2023-04-20T08:25:26.000000Z"},{"id":1053,"name":"Gentlemen Pub","legal_name":"!!! OOO \"SAFAR TRADE BIZNES\"","type":"1","address":"Ташкент, Юнусабадский район, массив Киёт, 60","cityID": 1,"phone":"+998 71 234 98 78","open_from":"11:00:00","open_to":"23:00:00","coords":"41.3282626820728, 69.2746908869594","sort":"500","is_active":"1","created_at":"2023-04-20T08:25:26.000000Z","updated_at":"2023-04-20T08:25:26.000000Z"},{"id":1054,"name":"The Bar Speak Easy","legal_name":"!!! MCHJ \"GREEN INTERNATIONAL\"","type":"1","address":"Ташкент, ул. Буюк Турон, 56","cityID": 2,"phone":"+998 90 185 30 03","open_from":"19:00:00","open_to":"03:00:00","coords":"41.117506, 69.056147","sort":"500","is_active":"1","created_at":"2023-04-20T08:25:26.000000Z","updated_at":"2023-04-20T08:25:26.000000Z"},{"id":1055,"name":"Jago","legal_name":"!!! Д XK \"JAGO-SAVDO\"","type":"1","address":"Ташкент, Сарыкульская ул., 92","cityID": 3,"phone":"+998 97 708 10 68","open_from":"12:00:00","open_to":"23:00:00","coords":"41.233171, 69.372083","sort":"500","is_active":"1", "created_at":"2023-04-20T08:25:26.000000Z","updated_at":"2023-04-20T08:25:26.000000Z"},{"id":1056,"name":"Вмясо Smokerbar","legal_name":"!!! OOO \"ALKORIY MCHJ\"","type":"1","address":"Ташкент, ул. Манирак, 10А","cityID": 4,"phone":"+998 78 812 10 10","open_from":"09:00:00","open_to":"21:00:00","coords":"41.392318, 69.316963","sort":"500","is_active":"1","created_at":"2023-04-20T08:25:26.000000Z","updated_at":"2023-04-20T08:25:26.000000Z"}];
+                </script>
+            </div>
+        </div>
+      </section>
+
+
+      <footer>
+        <div class="content mt-10 mb-5 text-center text-2xl text-brand-gray lg:text-4xl">
+
+          21+ SPIRTLI ICHIMLIKLARNI ORTIQCHA ICHISH INSON ASAB TIZIMI VA ICHKI
+
+          A'ZOLARI JIDDIY KASAL BO'LISHIGA SABAB BO'LADI.
+
+        </div>
+        <div class="content footer">
+
+          <div class="footer-content">
+
+            <a class="inline-block" href=""
+
+              ><img src="./img/icons/logo.png" alt=""
+
+            /></a>
+
+            <h2 class="border-b border-brand-accent font-semibold text-white">
+
+              Navigatsiya
+
+            </h2>
+
+            <nav>
+
+              <ul>
+
+                <li><a class="link" href="#hero">Birinchi sahifa </a></li>
+
+                <li><a class="link" href="#history">Tariximiz </a></li>
+
+                <li><a class="link" href="#brands">Brendlarimiz </a></li>
+
+                <li>
+
+                  <a class="link" href="#ingredients">Mahsulot tarkibi </a>
+
+                </li>
+
+                <li>
+
+                  <a class="link" href="#achievements">Yutuqlarimiz </a>
+
+                </li>
+
+                <li><a class="link" href="#quiz">Savol-javob</a></li>
+
+              </ul>
+
+            </nav>
+
+            <div class="text-center text-brand-light">
+
+              <p>
+
+                Tezkor telefon tarmog'i
+
+
+
+                <a href="tel: +(998) 78 140 99 99">+(998) 78 140 99 99</a>
+
+              </p>
+
+              <p>
+
+                OOO "UZCARLSBERG", 100207, O'zbekiston, г. Tosheknt, Temirchi
+
+                ko'chasi, 1.
+
+              </p>
+
+              <p>Faks: (+998) 78 140 88 88</p>
+
+              <p>
+
+                Elektron manzil
+
+
+
+                <a href="mailto: info@carlsberg.uz">info@carlsberg.uz</a>
+
+              </p>
+
+            </div>
+
+          </div>
+
+          <div class="py-5 text-center text-brand-light">
+
+            2022 Ekspertlardan sifat kafolati Barcha huquqlar himoyalangan
+
+          </div>
+
+        </div>
+
+      </footer>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.8"></script>
+    <script src="./js/app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jQueryFormStyler/2.0.2/jquery.formstyler.min.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=ce99f811-3087-4a3c-8f2c-402b8b40700c&lang=ru_RU" type="text/javascript"></script>
+    <script src="./js/places.js"></script>
+  </body>
+
+</html>

@@ -1,0 +1,368 @@
+.d-flex {
+    display: -ms-flexbox !important;
+    display: -webkit-flex !important;
+    display: flex !important;
+}
+
+.flex-row {
+    -ms-flex-direction: row !important;
+    flex-direction: row !important;
+}
+
+.justify-content-between {
+    -ms-flex-pack: justify !important;
+    justify-content: space-between !important;
+}
+.map {
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+#map {
+    width: 800px;
+    height: 570px;
+}
+
+.map-menu {
+    background: #891111;
+    flex-grow: 1;
+    padding: 30px;
+    overflow: auto;
+    height: 570px;
+}
+
+.d-block {
+    display: block !important;
+}
+
+@media (min-width: 768px) {
+    .d-md-none {
+        display: none !important;
+    }
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.font-weight-bold {
+    font-weight: 700 !important;
+}
+
+.map-menu__title {
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 0.8;
+    /* margin-bottom: 25px; */
+    color: #fff;
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+
+.map-menu ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.map-menu ol li {
+    counter-increment: map-menu-item;
+    margin-bottom: 11px;
+    color: #fff;
+}
+
+.map-menu ol li::before {
+    content: counter(map-menu-item) ". ";
+    font-weight: 600;
+}
+
+.map-menu-head {
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+}
+
+.map-menu-head .jq-selectbox__select-text {
+    width: 140px;
+    border-bottom: 1px solid #E7AB5C;
+    font-size: 15px;
+    font-weight: 400;
+    color: #fff;
+}
+
+.map-menu-head .jq-selectbox__trigger {
+    position: absolute;
+    width: 13px;
+    height: 100%;
+    top: 0;
+    right: 0;
+}
+
+
+.map-menu-head .jq-selectbox__trigger-arrow::before {
+  content: "";
+  background-image: url('../img/icons/arrow-select.svg');
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform: rotate(0);
+  top: 5px;
+}
+
+.jq-selectbox.opened .jq-selectbox__trigger-arrow::before {
+    transform: rotate(-180deg);
+    top: -12px;
+}
+
+.map-menu-head .jq-selectbox__dropdown {
+    width: 100%;
+    border-radius: 4px;
+    background: rgb(112, 1, 2);
+    padding: 20px;
+    color: #fff;
+    top: 33.5px !important;
+}
+
+.map-menu-head li.sel  {
+    color: #8A8A8A;
+}
+
+.map-menu-head li  {
+    cursor: pointer;
+    margin-bottom: 8px;
+}
+
+.map-menu-head li:last-child {
+    margin-bottom: 0;
+}
+
+
+@media (max-width: 500px) {
+    .map-search-block.d-flex.flex-row.justify-content-between.align-items-center {
+        margin: 0px;
+    }
+
+    .map-search-block__title {
+        display: none;
+    }
+}
+
+.map-balloon {
+    background: transparent;
+    font-size: 18px;
+    height: 260px;
+    padding: 30px 40px;
+    position: absolute;
+    width: 362px;
+}
+
+.map-balloon__close-btn {
+    color: #9c9c9c;
+    font-size: 26px;
+    moz-transition: color 0.4s;
+    ms-transition: color 0.4s;
+    o-transition: color 0.4s;
+    position: absolute;
+    right: 12px;
+    text-decoration: none !important;
+    top: 0;
+    transition: color 0.4s;
+    webkit-transition: color 0.4s;
+    z-index: 3;
+}
+
+.map-balloon__arrow {
+    bottom: -22px;
+    height: 22px;
+    position: absolute;
+    right: -4px;
+    width: 10px;
+}
+
+.map-balloon__header, .map-balloon__content, .map-balloon__footer {
+    position: relative;
+    z-index: 2;
+}
+
+.map-balloon__header {
+    font-weight: bold;
+    line-height: 0.8;
+    margin-bottom: 15px;
+}
+
+.map-balloon__footer {
+    border-top: dashed 1px #ded9d9;
+    padding-top: 12px;
+}
+
+.map-balloon__content p {
+    font-size: 16px;
+    margin-bottom: 14px;
+}
+
+.map-balloon__content span {
+    font-weight: 600;
+}
+
+.map-balloon__content .text-close, .map-balloon__content .text-open {
+    display: inline-block;
+    font-weight: bold;
+    padding-right: 23px;
+    position: relative;
+}
+
+.map-balloon__content .text-close {
+    color: #ca2929;
+}
+
+.map-balloon__content .text-close::after, .map-balloon__content .text-open::after {
+    content: "";
+    display: inline-block;
+    height: 18px;
+    position: absolute;
+    right: 0;
+    top: calc(50% - 8px);
+    width: 18px;
+}
+
+.map-balloon__content .text-close::after {
+    background: url('./img/icons/red-circle-icon.png') no-repeat center center;
+}
+
+.map-balloon__footer .map-route {
+    border-bottom: solid 1px #000;
+    color: #000;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: bold;
+    margin-bottom: 0;
+    moz-transition: all 0.4s;
+    ms-transition: all 0.4s;
+    o-transition: all 0.4s;
+    transition: all 0.4s;
+    webkit-transition: all 0.4s;
+}
+
+.map-balloon__content .text-open {
+    color: #3bc63b
+}
+
+.map-balloon__content .text-open::after {
+    background: url("./img/icons/green-circle-icon.png") no-repeat center center
+}
+
+.map-balloon svg {
+    left: -31px;
+    pointer-events: none;
+    position: absolute;
+    top: -31px;
+    z-index: 1;
+}
+
+.flatpickr-day.excursion-day {
+    color: green;
+}
+
+.flatpickr-day.excursion-day.flatpickr-disabled {
+    color: red;
+}
+
+.ymaps-2-1-79-route-panel__clear-row {
+    height: auto !important;
+}
+
+.ymaps-2-1-79-route-panel.ymaps-2-1-79-route-panel_built .ymaps-2-1-79-route-panel__clear-row {
+    display: flex !important;
+    flex-direction: column;
+}
+
+.get_directions {
+    color: rgb(196 25 25/var(--tw-bg-opacity));
+    font-size: 16px;
+}
+
+.social-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.copy_data {
+    display: inline-block;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.hero__left .heading-primary {
+    display: block;
+}
+
+/* The snackbar - position it at the bottom and in the middle of the screen */
+#snackbar {
+    visibility: hidden; /* Hidden by default. Visible on click */
+    min-width: 250px; /* Set a default minimum width */
+    margin-left: -125px; /* Divide value of min-width by 2 */
+    background-color: #333; /* Black background color */
+    color: #fff; /* White text color */
+    text-align: center; /* Centered text */
+    border-radius: 2px; /* Rounded borders */
+    padding: 16px; /* Padding */
+    position: fixed; /* Sit on top of the screen */
+    z-index: 1; /* Add a z-index if needed */
+    left: 50%; /* Center the snackbar */
+    bottom: 30px; /* 30px from the bottom */
+}
+
+/* Show the snackbar when clicking on a button (class added with JavaScript) */
+#snackbar.show {
+    visibility: visible; /* Show the snackbar */
+    /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
+    However, delay the fade out process for 2.5 seconds */
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+.pt-140 {
+    padding-top: 140px;
+}
+
+@media(max-width: 1024px) {
+   .pt-140 {
+    padding-top: 100px;
+   }
+}
+
+/* Animations to fade the snackbar in and out */
+@-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
+
+
+
+
+@media (max-width: 991px) {
+    .map {
+        flex-direction: column-reverse !important;
+    }
+
+    #map {
+        width: 100%;
+    }
+}
