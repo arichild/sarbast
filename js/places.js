@@ -1,6 +1,31 @@
 $(document).ready(function(){
     $('input, select').styler();
 
+    const tabs = document.querySelectorAll('.ui-tab');
+    const content = document.querySelectorAll('.ui-tabcontent');
+
+    if(tabs || content.length) {
+        tabs.forEach(element => {
+            element.addEventListener('click', (e) => {
+                const tab = e.target
+                const tabContent = tab.closest('.ui-tab').querySelector('.ui-tabcontent')
+
+                tabs.forEach(element => {
+                    if(!tab.classList.contains('active') && !tabContent.classList.contains('active')) {
+                        const tab = element.querySelector('.ui-tablinks')
+                        const tabContent = element.querySelector('.ui-tabcontent')
+
+                        tab.classList.remove('active')
+                        tabContent.classList.remove('active')
+                    }
+                });
+
+                tab.classList.toggle('active')
+                tabContent.classList.toggle('active')
+            })
+        });
+    }
+
     let collection, myMap, menu, ZoomLayout, zoomControl, BalloonLayout, BalloonContentLayout, routeControl, objects, objectManager;
 
     let balloonSvgBg = '<svg \n' +
@@ -638,10 +663,18 @@ $(document).ready(function(){
     //     },
     // });
 
-
-
-
-
+    if(document.querySelector('.faq-splide')) {
+        new Splide( '.faq-splide', {
+            direction   : 'ttb',
+            perMove: 3,
+            height      : '527px',
+            autoHeight: true,
+            wheel       : true,
+            focus     : 'center',
+            // perPage: 4,
+            // perMove: 1
+        }).mount();
+    }
 });
 
 
